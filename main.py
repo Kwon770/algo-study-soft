@@ -1,1 +1,1 @@
-print('hi')
+print("집에갈랭")
