@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2b613a88-1d81-4fe2-8cdd-670c4d46581e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/week0/mun/num01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num06.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num07.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num08.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num09.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week0/mun/num11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/algo-study-soft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/algo-study-soft.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week0/mun/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/week0/mun/num05.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +26,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="23DmkGZ1ZJH0bhJFLFMKzb4l5Wm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,8 +38,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -56,7 +54,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\문지혜\Desktop\study\algo-study-soft\week0\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\algo-study-soft\week0\kang\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -81,8 +79,13 @@
       <option name="presentableId" value="Default" />
       <updated>1641277173054</updated>
       <workItem from="1641277175697" duration="17000" />
+      <workItem from="1641278137763" duration="1778000" />
+      <workItem from="1641280380292" duration="755000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -94,6 +97,8 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/algo_study_soft$main.coverage" NAME="main Coverage Results" MODIFIED="1641280739972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
