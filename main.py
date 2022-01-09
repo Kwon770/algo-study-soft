@@ -1,8 +1,4 @@
-a = int(input())
-b = input()
-
-print(a*int(b[2]))
-print(a*int(b[1]))
-print(a*int(b[0]))
-print(a*int(b))
-
+a, b= input().split()
+a= int(a)
+b= int(b)
+print(a+b)
