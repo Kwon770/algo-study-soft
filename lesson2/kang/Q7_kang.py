@@ -1,20 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
-
-
-inputnum = input()
-div_num = [inputnum[:len(inputnum)//2],inputnum[len(inputnum)//2:]
-
-a = []
-
-for i in range(2):
-    line = []              
-    for j in range(len(inputnum)):
-        line.append(div_num[j])     
-    a.append(line)         
-print(num_list)
+#메모리: 30864KB 시간: 72ms
 
 
 # In[23]:
