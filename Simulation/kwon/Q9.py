@@ -1,38 +1,21 @@
 def solution(s):
-    ans = 987654321
-    for size in range(1, len(s)//2 + 1):
+    answer = len(s)
+    for size in range(1, len(s) // 2 + 1):
+        compressed = ""
+        prev = s[:size]
+        count = 1
 
-        localAns = 0
-        idx = 0
-        isEndStep = False
-        while idx < len(s):
+        for i in range(size, len(s), size):
+            cur = s[i:i + size]
 
-            zipStep = 1
-            isZipped = True
-            while isZipped:
-                if idx + (zipStep+1) * size > len(s):
-                    isZipped = False
-                    isEndStep = True
-                    break;
-
-                if s[idx:idx + size] != s[idx + zipStep * size:idx + (zipStep+1) * size]:
-                    isZipped = False
-                    break;
-
-                zipStep += 1
-
-            if zipStep > 1:
-                localAns += 1+size
-                idx += zipStep * size
+            if prev == cur:
+                count += 1
             else:
-                if isEndStep:
-                    localAns += len(s[idx:])
-                    break
-                else:
-                    localAns += size
-                    idx += size
+                compressed += str(count) + prev if count > 1 else prev
+                prev = cur
+                count = 1
 
-        if ans > localAns:
-            ans = localAns
+        compressed += str(count) + prev if count > 1 else prev
+        answer = min(answer, len(compressed))
 
-    return ans
+    return answer
