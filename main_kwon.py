@@ -11,33 +11,13 @@ import bisect
 import sys
 input=sys.stdin.readline
 
-def isPossibleCase(houses, distance):
-    global n, wifi
+n, x = map(int, input().split())
+arr = list(map(int, input().split()))
 
-    prev = houses[0]
-    for _ in range(wifi - 1):
-        idx = bisect.bisect_left(houses, prev + distance)
-        if idx >= n:
-            return False
+left = bisect.bisect_left(arr, x)
+right = bisect.bisect_right(arr, x)
 
-        prev = houses[idx]
-
-    return True
-
-
-n, wifi = map(int, input().split())
-houses = [int(input()) for _ in range(n)]
-houses.sort()
-
-ans = 0
-low = 1
-high = (houses[-1] - houses[0]) // (wifi-1) + 1
-while low <= high:
-    mid = (high + low) // 2
-    if isPossibleCase(houses, mid):
-        low = mid + 1
-        ans = max(ans, mid)
-    else:
-        high = mid - 1
-
-print(ans)
+if left == right:
+    print(-1)
+else:
+    print(right - left)
