@@ -11,13 +11,23 @@ import bisect
 import sys
 input=sys.stdin.readline
 
-n, x = map(int, input().split())
-arr = list(map(int, input().split()))
+def solve():
+    global arr
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (high + low) // 2
+        if mid == arr[mid]:
+            print(mid)
+            return
 
-left = bisect.bisect_left(arr, x)
-right = bisect.bisect_right(arr, x)
+        if mid > arr[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
 
-if left == right:
     print(-1)
-else:
-    print(right - left)
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+solve()
