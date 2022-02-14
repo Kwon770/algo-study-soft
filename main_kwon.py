@@ -1,26 +1,47 @@
-# https://www.acmicpc.net/problem/1715
-# 1715 카드 정렬하기
-# Memory : 33712 KB, Time : 204 ms
-
-# 그리디식으로 가장 작은 수의 카드 2개를 합쳐가면 최소의 비교 수로 전부 합칠 수 있다.
-# 주의할 점은 2개를 합친 카드 또한 정렬된 상태여야 한다는 것이다. (늘 최소인 2개를 선택)
-# 1. 합칠 때마다 새로 sort() => O(N^2LogN), 시간 초과
-# 2. PriorityQueue 클래스 사용 => 가능하지만, (892ms)
-# 3. heapq 클래스 사용 => 더 작은 시간복잡도를 보임 (204ms)
+# https://programmers.co.kr/learn/courses/30/lessons/60060
+# 2020 KAKAO BLUND RECRUITMENT, 가사 검색
 
 import sys
-input=sys.stdin.readline
-from heapq import *
+input = sys.stdin.readline
+import heapq
 
-n = int(input())
-hq = []
-for _ in range(n):
-    heappush(hq, int(input()))
+INF = int(1e9)
 
-ans = 0
-while len(hq) >= 2:
-    comparing = heappop(hq) + heappop(hq)
-    ans += comparing
-    heappush(hq, comparing)
+def getDistanceByDijkstra(start, end):
+    distance = [INF] * (n + 1)
+    visited = [False] * (n + 1)
+    q = []
+    heapq.heappush(q, (0, start))
+    distance[start] = 0
+    while q:
+        dist, now = heapq.heappop(q)
+        if distance[now] < dist:
+            continue
 
-print(ans)
+        for node in graph[now]:
+            cost = dist + node[0]
+            if cost < distance[node[1]]:
+                distance[node[1]] = cost
+                heapq.heappush(q, (cost, node[1]))
+
+    return distance[end]
+
+def solution():
+    global n, m, graph
+    n, m = map(int, input().split())
+    graph = [[] for _ in range(n + 1)]
+    for _ in range(m):
+        a, b = map(int, input().split())
+        graph[a].append((1, b))
+        graph[b].append((1, a))
+    x, k = map(int, input().split())
+
+    toK = getDistanceByDijkstra(1, k)
+    toX = getDistanceByDijkstra(k, x)
+    if toK >= INF or toX >= INF:
+        print(-1)
+    else:
+        print(toK + toX)
+
+
+print(solution())
