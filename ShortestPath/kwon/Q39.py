@@ -1,8 +1,4 @@
-# https://www.acmicpc.net/problem/11404
-# Floyd warshall : 11404 플로이드
-# Memory : 30864 KB , Time : 536 ms
-
-# 플로이드 와샬 알고리즘을 그대로 사용하는 문제
+# ShortestPath - Q39 화성탐사 (P388)
 
 import sys; input = sys.stdin.readline
 import heapq
