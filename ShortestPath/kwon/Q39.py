@@ -1,5 +1,9 @@
 # ShortestPath - Q39 화성탐사 (P388)
 
+# 문제와 (그래프 + 최단/최소) 단서에서 다익스트라를 떠올릴 수 있다.
+    # BFS/DFS를 이용할 수 없다. 경로 중에서 최소 가중치인 경로를 찾아야하는데, DFS/BFS는 한 번 탐색한 노드는 더이상 탐색하지않는다.
+# 2차원 형태의 가중치를 이용하여 다익스트라를 구현하면 됨.
+
 import sys; input = sys.stdin.readline
 import heapq
 
